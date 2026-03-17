@@ -17,6 +17,8 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 const truckPhotos = [
   "/trucks/truck-1.jpeg",
   "/trucks/truck-2.jpeg",
+  "/trucks/truck-3.jpeg",
+  "/trucks/truck-4.jpeg",
 ];
 
 const services = [
@@ -143,12 +145,12 @@ const Index = () => {
 
       {/* Truck Gallery */}
       <section className="py-8 md:py-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-6">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Araç Filomuz</p>
             <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight">Güvenli Taşımacılık Araçlarımız</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {truckPhotos.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden border border-border aspect-[10/7]">
                 <img src={src} alt={`Kurulumix nakliyat aracı ${i + 1}`} className="w-full h-full object-cover" />
