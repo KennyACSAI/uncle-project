@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, Wrench, Settings, Package, Home, Shield, Clock, Star, ChevronRight, Zap, ThumbsUp, Award } from "lucide-react";
+import logo from "@/assets/logo.png";
+import { Phone, MessageCircle, Wrench, Settings, Package, Home, Shield, Clock, Star, Zap, ThumbsUp, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -11,7 +12,7 @@ const services = [
   { icon: Wrench, title: "Installation", desc: "Professional installation of appliances, fixtures, TV mounts, shelves, and more." },
   { icon: Settings, title: "Repair", desc: "Quick and reliable repairs for household items, plumbing fixes, and electrical work." },
   { icon: Package, title: "Assembly", desc: "Furniture assembly, flat-pack builds, and equipment setup done right." },
-  { icon: Home, title: "Home Setup", desc: "Complete home setup for new moves — curtains, lighting, smart devices, and more." },
+  { icon: Home, title: "Home Setup", desc: "Complete home setup for new moves, curtains, lighting, smart devices, and more." },
 ];
 
 const trustPoints = [
@@ -24,7 +25,7 @@ const trustPoints = [
 const reviews = [
   { name: "Ayşe K.", text: "Kurulumix mounted our TV and assembled all our IKEA furniture in one visit. Incredibly fast and clean work!", rating: 5 },
   { name: "Mehmet D.", text: "I called in the morning and they were at my door by noon. Very professional and friendly team.", rating: 5 },
-  { name: "Sarah L.", text: "Just moved into my new apartment and Kurulumix handled everything — curtains, shelves, light fixtures. Lifesaver!", rating: 5 },
+  { name: "Sarah L.", text: "Just moved into my new apartment and Kurulumix handled everything, curtains, shelves, light fixtures. Lifesaver!", rating: 5 },
   { name: "Emre T.", text: "They fixed a plumbing issue that two other services couldn't figure out. Highly recommend.", rating: 4 },
 ];
 
@@ -78,21 +79,33 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-sm font-medium text-primary border border-primary/20">
-              <Zap className="w-4 h-4" /> Trusted Home Services
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="max-w-3xl space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-sm font-medium text-primary border border-primary/20">
+                <Zap className="w-4 h-4" /> Trusted Home Services
+              </div>
+              <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.08] tracking-tight">
+                Your Home,{" "}
+                <span className="text-gold-gradient">Perfectly Set Up.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                From installations and repairs to furniture assembly and full home setup, Kurulumix delivers fast, professional, and reliable service right to your door.
+              </p>
+              <ContactButtons className="pt-2" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.08] tracking-tight">
-              Your Home,{" "}
-              <span className="text-gold-gradient">Perfectly Set Up.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              From installations and repairs to furniture assembly and full home setup — Kurulumix delivers fast, professional, and reliable service right to your door.
-            </p>
-            <ContactButtons className="pt-2" />
+
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md xl:max-w-lg">
+                <div className="absolute inset-0 gold-gradient opacity-10 blur-3xl rounded-full pointer-events-none" />
+                <img
+                  src={logo}
+                  alt="Kurulumix logo"
+                  className="relative w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)]"
+                />
+              </div>
+            </div>
           </div>
         </div>
-        {/* Decorative element */}
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full gold-gradient opacity-[0.07] blur-3xl pointer-events-none" />
       </section>
 
@@ -208,7 +221,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Contact Kurulumix</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Reach out via WhatsApp or phone. We typically respond within minutes.</p>
           <ContactButtons className="justify-center" />
-          <p className="text-sm text-muted-foreground mt-6">Available 7 days a week, 08:00 – 20:00</p>
+          <p className="text-sm text-muted-foreground mt-6">Available 7 days a week, 08:00 - 20:00</p>
         </div>
       </section>
 
